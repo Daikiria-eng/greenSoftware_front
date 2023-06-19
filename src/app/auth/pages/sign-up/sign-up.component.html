@@ -1,9 +1,9 @@
 <div id="log_in">
     <div id="log_in_field">
-        <form action="" id="log_in_form">
-            <input type="text" id="user_name" placeholder="Nombre completo"/>
-            <input type="email" id="emai" placeholder="Correo electrónico"/>
-            <input type="password" id="password" placeholder="Contraseña"/>
+        <form action="" (ngSubmit)="signUp()" id="log_in_form">
+            <input [(ngModel)]="user.name" type="text" id="user_name" placeholder="Nombre completo"/>
+            <input [(ngModel)]="user.email" type="email" id="emai" placeholder="Correo electrónico"/>
+            <input name="password" type="password" id="password" placeholder="Contraseña" [(ngModel)]="user.password" />
             <button type="submit">Ingresar!</button>
         </form>
         <p>No tiene cuenta ?<a href="" routerLink="/sign-up"> Regístrese aquí</a></p>

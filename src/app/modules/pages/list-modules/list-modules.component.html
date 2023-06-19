@@ -1,7 +1,12 @@
 <div id="corpse">
     <div id="modules_cards">
-        <div *ngFor="let cont of [1,2,3,4,5,6,7]" class="module_card" id="module_card_{{cont}}">
-            <h1>moudulo {{cont}}<span>Descripcion {{cont}}</span></h1>
+        <div *ngFor="let module of modules" ngClass="module_card" id="{{module.name}}">
+            <h3>{{module.name}}</h3>
+            <span>{{module.description}}</span>
+            <div class="interact_with">
+                <button routerLink="/modules/module-contetn">Ir al modulo</button>
+                <button routerLink="/modules/exam">Hacer examen</button>
+            </div>
         </div>
     </div>
 </div>
