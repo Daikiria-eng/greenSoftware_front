@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ListModulesComponent } from './pages/list-modules/list-modules.component';
+import { FormsModule } from '@angular/forms';
 import { ExamComponent } from './pages/exam/exam.component';
 
 const routes:Routes=[
@@ -18,6 +19,7 @@ const routes:Routes=[
   declarations: [],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild(routes)
   ]
 })
